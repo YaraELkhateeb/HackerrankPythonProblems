@@ -1,0 +1,15 @@
+no_of_english=input()
+english=list((input()).split())
+no_of_french=input()
+french =list((input()).split())
+
+sum=len(english)
+for i in english:
+
+    for j in french:
+
+        if i==j:
+            sum-=1
+            
+print(sum)
+            

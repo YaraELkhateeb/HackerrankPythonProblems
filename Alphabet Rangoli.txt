@@ -1,0 +1,46 @@
+def print_rangoli(size):
+    alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    mid=size*2//2
+    s=1
+    l=size
+    for i in range(size):
+        
+        
+        for j in range(mid-s):
+            print("--",end="")
+        
+        for j in range(l-1,mid-s,-1):
+            print(alphabet[j]+'-',end="")
+        
+        print(alphabet[l-s],end="")
+        for j in range(mid-s+1,l):
+            print('-'+alphabet[j],end="")
+        
+        for j in range(mid-s):
+            print("--",end="")
+        print()
+        s+=1
+    k=mid-1
+    for i in range(size-1,0,-1):
+        
+        
+        for j in range(mid-k):
+            print("--",end="")
+        
+        for j in range(l-1,mid-k,-1):
+            print(alphabet[j]+'-',end="")
+        print(alphabet[l-k],end="")
+        for j in range(mid-k+1,l):
+            print('-'+alphabet[j],end="")
+        
+        for j in range(mid-k):
+            print("--",end="")
+        print()
+        k-=1
+        
+        
+        
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)

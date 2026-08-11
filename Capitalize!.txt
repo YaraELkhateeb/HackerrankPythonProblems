@@ -1,0 +1,38 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the solve function below.
+def solve(s):
+    l=list(s.replace(" ",",#,").replace(",,",",").split(","))
+    k=str()
+    
+    
+    sum=0
+    for i in l:
+        sum+=1
+        if i[0].islower():
+            temp=list(i)
+            temp[0]=temp[0].upper()
+            k=k+("".join(temp))
+        elif i[0].isalnum():
+            k=k+("".join(i))
+            
+        else:
+            k=k+(" ")  
+             
+    return(((k)))
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()

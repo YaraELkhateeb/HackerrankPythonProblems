@@ -1,0 +1,42 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+row ,column=map(int,(input().split(" ")))
+increase=0
+def printline():
+    return ".|."
+def getodd(n):
+    return(n*2+1)
+
+l=1
+for i in range(row):
+    if i<row//2:
+        length=(column-getodd(i)-(getodd(i)*2))//2
+        for k in range (length):
+            print("-",end="")
+        for k in range(getodd(i)):
+            print(printline(),end="")
+        for k in range (length):
+            print("-",end="")
+    elif i==row//2:
+        length=(column-7)//2
+        for k in range (length):
+            print("-",end="")
+        print("WELCOME",end="")
+        for k in range (length):
+            print("-",end="")
+    elif i>((row//2)):
+        length=(column-getodd(i-(2*l))-(getodd(i-(2*l))*2))//2
+        for k in range (length):
+            print("-",end="")
+        for k in range(getodd(i-(2*l))):
+            print(printline(),end="")
+        for k in range (length):
+            print("-",end="")
+        l+=1
+    
+    print()
+            
+            
+              
+                
+
+

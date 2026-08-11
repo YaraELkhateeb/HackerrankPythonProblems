@@ -1,0 +1,20 @@
+if __name__ == '__main__':
+    d=dict()
+    k=set()
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        d[name]=score
+    
+    new_valuesd=(sorted(set(d.values())))
+    second_value=new_valuesd[1]
+
+
+    newd=dict((sorted(d.items())))
+
+
+    for m in newd:
+        if newd[m]==second_value:
+            print(m)
+    
+        

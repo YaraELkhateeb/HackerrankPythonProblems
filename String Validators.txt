@@ -1,0 +1,26 @@
+if __name__ == '__main__':
+    s = input()
+    dig=False
+    alp=False
+    low=False
+    upp=False
+    digalp=False
+    for i in s:
+        if(i.isdigit()):
+            dig=True
+        if(i.isalpha()):
+            alp=True
+        if(i.islower()):
+            low=True
+        if(i.isupper()):
+            upp=True
+            
+    digalp=dig or alp
+    print(digalp)
+    print(alp)
+    print(dig)
+    
+    print(low)
+    print(upp)
+        
+        
